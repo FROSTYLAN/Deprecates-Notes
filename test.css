@@ -1,0 +1,3 @@
+.default input:default + label {
+  color: red;
+}

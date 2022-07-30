@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclases</title>
+  </head>
+  <body>
+    <!-- :active -->
+    <section>
+      <h2>:active</h2>
+      <div class="active">
+        <a href="#">Este es un enlace</a>
+      </div>
+      <style>
+        .active a:active {
+          color: red;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- :checked -->
+    <section>
+      <h2>:checked</h2>
+      <div class="checked">
+        <div>
+          <input type="radio" name="my-input" id="yes" />
+          <label for="yes">yes</label>
+          <input type="radio" name="my-input" id="no" />
+          <label for="no">no</label>
+        </div>
+        <div>
+          <input type="checkbox" name="my-checkbox" id="opt-in" />
+          <label for="opt-in">Check me!</label>
+        </div>
+        <div>
+          <select name="my-select" id="fruit">
+            <option value="opt1">html</option>
+            <option value="opt2">css</option>
+            <option value="otp3">javascript</option>
+          </select>
+        </div>
+      </div>
+      <style>
+        .checked input[type="radio"]:checked {
+          box-shadow: 0 0 0 3px orange;
+        }
+        .checked input[type="checkbox"]:checked {
+          box-shadow: 0 0 0 3px blue;
+        }
+        .checked option:checked {
+          color: red;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- :default -->
+    <section>
+      <h2>:default</h2>
+      <div class="default">
+        <input type="radio" name="my-radio" id="yes" checked />
+        <label for="yes">yes</label>
+        <input type="radio" name="my-radio" id="no" />
+        <label for="no">no</label>
+      </div>
+      <style>
+        .default input:default + label {
+          color: red;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- :disabled -->
+    <section>
+      <h2>:disabled</h2>
+      <div class="disabled">
+        <input type="checkbox" name="activar" id="activar" checked />
+        <label for="activar">Activar: </label>
+        <input type="text" placeholder="Nombre" />
+      </div>
+      <style>
+        .disabled input[type="text"]:disabled {
+          background: #ccc;
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("activar").onchange = toggleActivar;
+        });
+        function toggleActivar() {
+          var getInputText = document.querySelectorAll(
+            '.disabled input[type="text"]'
+          );
+          getInputText[0].disabled = !getInputText[0].disabled;
+        }
+      </script>
+    </section>
+    <hr />
+  </body>
+</html>
