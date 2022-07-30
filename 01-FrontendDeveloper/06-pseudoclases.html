@@ -100,5 +100,28 @@
       </script>
     </section>
     <hr />
+
+    <!-- :enabled -->
+    <section>
+      <h2>:enabled</h2>
+      <div class="enabled">
+        <form action="#">
+          <label for="firstname">Nombre (habilitado): </label>
+          <input type="text" id="firstname" value="Lorem" /><br />
+          <label for="lastname">Apellidos (deshabilitado: </label>
+          <input type="text" id="lastname" value="Ipsum" disabled /><br />
+          <input type="button" value="Enviar" />
+        </form>
+      </div>
+      <style>
+        .enabled input:enabled {
+          color: #2b2;
+        }
+        .enabled input:disabled {
+          color: #aaa;
+        }
+      </style>
+    </section>
+    <hr />
   </body>
 </html>
