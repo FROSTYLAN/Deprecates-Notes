@@ -280,40 +280,24 @@
     </section>
     <hr />
 
-    <!-- :valid. :invalid :required -->
+    <!-- :last-child -->
     <section>
-      <h2>:valid, :invalid y :required</h2>
-      <div class="valid-invalid-required">
-        <form>
-          <label for="url_input">Ingresa una URL:</label>
-          <input type="url" id="url_input" />
-          <br />
-          <br />
-          <label for="email_input"
-            >Introduzca una dirección de correo electrónico:</label
-          >
-          <input type="email" id="email_input" required />
-        </form>
+      <h2>:last-child</h2>
+      <div class="last-child">
+        <div>
+          <p>Este texto no está seleccionado.</p>
+          <p>¡Este texto está seleccionado!</p>
+        </div>
+        <div>
+          <p>Este texto no está seleccionado</p>
+          <h2>Este texto no es un p.</h2>
+        </div>
       </div>
       <style>
-        .valid-invalid-required input:invalid {
-          background-color: #ffdddd;
-        }
-        .valid-invalid-required form:invalid {
-          border: 5px solid #ffdddd;
-        }
-        .valid-invalid-required input:valid {
-          background-color: #ddffdd;
-        }
-        .valid-invalid-required form:valid {
-          border: 5px solid #ddffdd;
-        }
-        .valid-invalid-required input:required {
-          border-color: #800000;
-          border-width: 3px;
-        }
-        .valid-invalid-required input:required:invalid {
-          border-color: #c00000;
+        .last-child p:last-child {
+          color: lime;
+          background-color: black;
+          padding: 5px;
         }
       </style>
     </section>
