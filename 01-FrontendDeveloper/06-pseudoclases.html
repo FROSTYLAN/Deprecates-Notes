@@ -232,5 +232,52 @@
       </style>
     </section>
     <hr />
+
+    <!-- :in-range, out-range -->
+    <section>
+      <h2>:in-range, out-range</h2>
+      <div class="in-out-range">
+        <form action="" id="form1">
+          <ul>
+            Los valores entre 1 y 10 son válidos.
+            <li>
+              <input
+                id="value1"
+                name="value1"
+                type="number"
+                placeholder="1 a 10"
+                min="1"
+                max="10"
+                value="12"
+              />
+              <label for="value1">Tu valor esta </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <style>
+        .in-out-range li {
+          list-style: none;
+          margin-bottom: 1em;
+        }
+        .in-out-range input {
+          border: 1px solid black;
+        }
+        .in-out-range input:in-range {
+          background-color: rgba(0, 255, 0, 0.25);
+        }
+        .in-out-range input:out-of-range {
+          background-color: rgba(255, 0, 0, 0.25);
+          border: 2px solid red;
+        }
+        .in-out-range input:in-range + label::after {
+          content: "bien.";
+        }
+        .in-out-range input:out-of-range + label::after {
+          content: "fuera de rango!";
+        }
+      </style>
+    </section>
+    <hr />
   </body>
 </html>
