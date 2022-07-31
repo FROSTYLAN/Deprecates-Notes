@@ -1,7 +1,5 @@
-@page :first {
-  margin-left: 50%;
-  margin-top: 50%;
-}
-.first p {
-  page-break-after: always;
+.last-child p:last-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
 }

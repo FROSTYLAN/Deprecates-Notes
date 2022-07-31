@@ -149,21 +149,23 @@
     </section>
     <hr />
 
-    <!-- :first-child -->
+    <!-- :first-child, :last-child -->
     <section>
-      <h2>:first-child</h2>
-      <div class="first-child">
+      <h2>:first-child, :last-child</h2>
+      <div class="first-last-child">
         <div>
           <p>¡Este texto está seleccionado!</p>
           <p>Este texto no está seleccionado.</p>
+          <p>Este es el último p del div.</p>
         </div>
         <div>
           <h2>Este texto no está seleccionado: no es un `p`.</h2>
           <p>Este texto no está seleccionado.</p>
+          <p>Este el el útimo p de otro div</p>
         </div>
       </div>
       <style>
-        .first-child p:first-child {
+        .first-last-child p:first-child,.first-last-child p:last-child {
           color: lime;
           background-color: black;
           padding: 5px;
@@ -172,16 +174,17 @@
     </section>
     <hr />
 
-    <!-- :first-of-type -->
+    <!-- :first-of-type, :last-of-type -->
     <section>
-      <h2>:first-of-type</h2>
+      <h2>:first-of-type, :last-of-type</h2>
       <div class="first-of-type">
         <h2>Encabezado</h2>
         <p>Párrafo 1</p>
         <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
       </div>
       <style>
-        .first-of-type p:first-of-type {
+        .first-of-type p:first-of-type, .first-of-type p:last-of-type {
           color: red;
           font-style: italic;
         }
@@ -280,27 +283,5 @@
     </section>
     <hr />
 
-    <!-- :last-child -->
-    <section>
-      <h2>:last-child</h2>
-      <div class="last-child">
-        <div>
-          <p>Este texto no está seleccionado.</p>
-          <p>¡Este texto está seleccionado!</p>
-        </div>
-        <div>
-          <p>Este texto no está seleccionado</p>
-          <h2>Este texto no es un p.</h2>
-        </div>
-      </div>
-      <style>
-        .last-child p:last-child {
-          color: lime;
-          background-color: black;
-          padding: 5px;
-        }
-      </style>
-    </section>
-    <hr />
-  </body>
+
 </html>
