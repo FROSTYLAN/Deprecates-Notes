@@ -442,4 +442,25 @@
     </style>
   </section>
   <hr />
+
+  <!-- :read-only, :read-write -->
+  <section>
+    <h2>:read-only, :read-write</h2>
+    <div class="read">
+      <label for="readonly">Solo lectura: </label>
+      <input type="text" name="readonly" id="readonly" readonly>
+
+      <label for="readwrite">Lectura y escritura: </label>
+      <input type="text" name="readwrite" id="readwrite">
+    </div>
+    <style>
+      .read input:read-only {
+        background-color: red;
+      }
+      .read input:read-write {
+        background-color: green;
+      }
+    </style>
+  </section>
+  <hr />
 </html>
