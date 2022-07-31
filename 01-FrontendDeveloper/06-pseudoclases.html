@@ -225,11 +225,11 @@
         <a href="#">Intenta pasar el mouse sobre este enlace.</a>
       </div>
       <style>
-        a {
+        .hover a {
           background-color: powderblue;
           transition: background-color 0.5s;
         }
-        a:hover {
+        .hover a:hover {
           background-color: gold;
         }
       </style>
@@ -283,5 +283,124 @@
     </section>
     <hr />
 
+      <!-- :invalid, :valid y : required -->
+  <section>
+    <h2>:invalid, :valid y : required</h2>
+    <div class="invalid">
+      <form>
+        <label for="url_input">Ingresa una URL:</label>
+        <input type="url" id="url_input" />
+        <br />
+        <br />
+        <label for="email_input">Introduzca una dirección de correo electrónico:</label>
+        <input type="email" id="email_input" required/>
+      </form>
+    </div>
+    <style>
+      .invalid input:invalid {
+        background-color: #ffdddd;
+      }
+      .invalid form:invalid {
+        border: 5px solid #ffdddd;
+      }
+      .invalid input:valid {
+        background-color: #ddffdd;
+      }
+      .invalid form:valid {
+        border: 5px solid #ddffdd;
+      }
+      .invalid input:required {
+        border-color: #800000;
+        border-width: 3px;
+      }
+      .invalid input:required:invalid {
+        border-color: #C00000;
+      }
+    </style>
+  </section>
+  <hr />
 
+  <!-- :link :visited -->
+  <section>
+    <h2>:link, :visited</h2>
+    <div class="link">
+      <a href="#ordinary-target">Este es un enlace ordinario.</a><br>
+      <a href="">Ya has visitado este enlace.</a><br>
+      <a>Enlace de marcador de posición (no se personalizará)</a>
+    </div>
+    <style>
+      .link a:link {
+        color: red;
+      }
+      .link a:visited {
+        color: blue;
+      }
+    </style>
+  </section>
+  <hr />
+
+    <!-- :active -->
+  <section>
+    <h2>:active</h2>
+    <div class="active">
+      <a href="#">Este es un enlace</a>
+    </div>
+    <style>
+      .active a:active {
+        color: red;
+      }
+    </style>
+  </section>
+  <hr />
+
+  <!-- :not() -->
+  <section>
+    <h2>:not()</h2>
+    <div class="not">
+      <p>Soy un párrafo.</p>
+      <p class="fancy">¡Soy muy elegante!</p>
+      <div>NO soy un párrafo.</div>
+    </div>
+    <style>
+      .not :not(p) {
+        color: blue;
+      } 
+    </style>
+  </section>
+  <hr />
+
+  <!-- :nth-child(), nth-last-child(), nth-of-type(), nth-last-of-type() -->
+  <section>
+    <h2>:nth-child(), nth-last-child(), nth-of-type(), nth-last-of-type()</h2>
+    <div class="nth">
+      <p>uno</p>
+      <p>dos</p>
+      <div>no soy un p</div>
+      <p>tres</p>
+      <p>cuatro</p>
+      <p>cinco</p>
+      <div>no soy un p</div>
+      <p>seis</p>
+      <p>siete</p>
+    </div>
+    <style>
+      /*
+        odd -> Representa a los impares.
+        even -> Representa a los pares.
+      */
+      .nth p:nth-child(2) {
+        color: blue;
+      } 
+      .nth p:nth-last-child(2) {
+        color: red;
+      }
+      .nth p:nth-of-type(3) {
+        color: green;
+      } 
+      .nth p:nth-last-of-type(3) {
+        color: darkorange;
+      }
+    </style>
+  </section>
+  <hr />
 </html>
