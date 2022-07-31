@@ -149,6 +149,60 @@
     </section>
     <hr />
 
+    <!-- :first-child -->
+    <section>
+      <h2>:first-child</h2>
+      <div class="first-child">
+        <div>
+          <p>¡Este texto está seleccionado!</p>
+          <p>Este texto no está seleccionado.</p>
+        </div>
+        <div>
+          <h2>Este texto no está seleccionado: no es un `p`.</h2>
+          <p>Este texto no está seleccionado.</p>
+        </div>
+      </div>
+      <style>
+        .first-child p:first-child {
+          color: lime;
+          background-color: black;
+          padding: 5px;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- :first-of-type -->
+    <section>
+      <h2>:first-of-type</h2>
+      <div class="first-of-type">
+        <h2>Encabezado</h2>
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+      </div>
+      <style>
+        .first-of-type p:first-of-type {
+          color: red;
+          font-style: italic;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- :active -->
+    <section>
+      <h2>:active</h2>
+      <div class="active">
+        <a href="#">Este es un enlace</a>
+      </div>
+      <style>
+        .active a:active {
+          color: red;
+        }
+      </style>
+    </section>
+    <hr />
+
     <!-- :active -->
     <section>
       <h2>:active</h2>
