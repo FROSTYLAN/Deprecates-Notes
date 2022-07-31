@@ -215,15 +215,19 @@
     </section>
     <hr />
 
-    <!-- :active -->
+    <!-- :hover -->
     <section>
-      <h2>:active</h2>
-      <div class="active">
-        <a href="#">Este es un enlace</a>
+      <h2>:hover</h2>
+      <div class="hover">
+        <a href="#">Intenta pasar el mouse sobre este enlace.</a>
       </div>
       <style>
-        .active a:active {
-          color: red;
+        a {
+          background-color: powderblue;
+          transition: background-color 0.5s;
+        }
+        a:hover {
+          background-color: gold;
         }
       </style>
     </section>
