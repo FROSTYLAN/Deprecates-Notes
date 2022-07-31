@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoelementos</title>
+  </head>
+  <body>
+    <!-- ::after -->
+    <section>
+      <h2>:after</h2>
+      <div class="after">
+        <p>Este es un parrafo.</p>
+      </div>
+      <style>
+        .after p::after {
+          color: red;
+          content: "Texto insertado con after.";
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- ::before -->
+    <section>
+      <h2>:before</h2>
+      <div class="before">
+        <p>Este es un parrafo.</p>
+      </div>
+      <style>
+        .before p::before {
+          color: red;
+          content: "Texto insertado con before.";
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- ::first-letter -->
+    <section>
+      <h2>:first-letter</h2>
+      <div class="first-letter">
+        <p>
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat.
+        </p>
+        <p>-El comienzo es un signo de puntuación especial.</p>
+        <p>_El comienzo es un signo de puntuación especial.</p>
+        <p>"El comienzo es un signo de puntuación especial.</p>
+        <p>'El comienzo es un signo de puntuación especial.</p>
+      </div>
+      <style>
+        .first-letter p::first-letter {
+          color: red;
+          font-size: 130%;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- ::first-line -->
+    <section>
+      <h2>:first-line</h2>
+      <div class="first-line">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+          asperiores ad amet magni exercitationem fuga dolore, ipsum ea itaque
+          error atque qui nam harum iure odio perferendis nostrum repudiandae
+          culpa nemo tempore cum. Aut ex quia dolorum impedit nostrum deserunt
+          rem enim laborum accusantium quasi expedita nam nobis doloremque fuga,
+          nisi, voluptates velit eaque et beatae quo possimus harum ratione
+          inventore. Odit quisquam ut distinctio nisi iure non doloremque illum
+          vero, rerum minima consequuntur ex neque quas! Saepe, debitis non
+          totam dicta repellat quo consequuntur repellendus cupiditate ad sit.
+          Dolor, eum? Consectetur debitis doloribus doloremque suscipit sed
+          molestias vitae dolorem?
+        </p>
+      </div>
+      <style>
+        .first-line p::first-line {
+          color: red;
+          font-size: 130%;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- ::backdrop -->
+    <section>
+      <h2>:backdrop</h2>
+      <div class="backdrop">
+        <dialog open>
+          <p>Greetings, one and all!</p>
+          <form method="dialog">
+            <button>OK</button>
+          </form>
+        </dialog>
+      </div>
+      <style>
+        .backdrop dialog::backdrop {
+          background-color: darkorange;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- ::placeholder -->
+    <section>
+      <h2>:placeholder</h2>
+      <div class="placeholder">
+        <input placeholder="Type something here!" />
+      </div>
+      <style>
+        .placeholder input::placeholder {
+          color: red;
+          font-size: 1.2em;
+          font-style: italic;
+        }
+      </style>
+    </section>
+    <hr />
+
+    <!-- ::market -->
+    <section>
+      <h2>:marker</h2>
+      <div class="marker">
+        <ul>
+          <li>Duraznos</li>
+          <li>Manzanas</li>
+          <li>Ciruelas</li>
+        </ul>
+      </div>
+      <style>
+        .marker ul li::marker {
+          color: red;
+        }
+      </style>
+    </section>
+    <hr />
+  </body>
+</html>
