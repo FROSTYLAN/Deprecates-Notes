@@ -403,4 +403,25 @@
     </style>
   </section>
   <hr />
+
+  <!-- :only-child, :only-of-type -->
+  <section>
+    <h2>:only-child, :only-of-type</h2>
+    <div class="only">
+      <p>Soy el único p dentro de este div</p>
+    </div>
+    <style>
+      /* Selecciona cada <p>, pero solo si es el */
+      /* único hijo de su padre */
+      .only p:only-child {
+        background-color: lime;
+      }
+      /* Selecciona cada <p>, pero solo si es el único */
+      /* elemento <p> dentro de su padre */
+      .only p:only-of-type {
+        background-color: lime;
+      }
+    </style>
+  </section>
+  <hr />
 </html>
