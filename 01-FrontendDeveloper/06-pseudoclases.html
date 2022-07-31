@@ -123,5 +123,44 @@
       </style>
     </section>
     <hr />
+
+    <!-- :first -->
+    <section>
+      <h2>:first</h2>
+      <div class="first">
+        <p>Primera página</p>
+        <p>Segunda página</p>
+        <button>Imprimir!</button>
+      </div>
+      <style>
+        @page :first {
+          margin-left: 50%;
+          margin-top: 50%;
+        }
+        .first p {
+          page-break-after: always;
+        }
+      </style>
+      <script>
+        document.querySelector("button").onclick = function () {
+          window.print();
+        };
+      </script>
+    </section>
+    <hr />
+
+    <!-- :active -->
+    <section>
+      <h2>:active</h2>
+      <div class="active">
+        <a href="#">Este es un enlace</a>
+      </div>
+      <style>
+        .active a:active {
+          color: red;
+        }
+      </style>
+    </section>
+    <hr />
   </body>
 </html>
