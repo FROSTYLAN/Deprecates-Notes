@@ -189,15 +189,27 @@
     </section>
     <hr />
 
-    <!-- :active -->
+    <!-- :focus -->
     <section>
-      <h2>:active</h2>
-      <div class="active">
-        <a href="#">Este es un enlace</a>
+      <h2>:focus</h2>
+      <div class="focus">
+        <input
+          class="red-input"
+          value="Voy a ser de color rojo cuando enfoque."
+        /><br />
+        <input
+          class="blue-input"
+          value="Voy a ser de color azul cuando enfoque."
+        />
       </div>
       <style>
-        .active a:active {
+        .red-input:focus {
+          background: yellow;
           color: red;
+        }
+        .blue-input:focus {
+          background: yellow;
+          color: blue;
         }
       </style>
     </section>
