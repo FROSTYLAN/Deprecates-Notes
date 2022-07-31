@@ -424,4 +424,22 @@
     </style>
   </section>
   <hr />
+
+  <!-- :optional -->
+  <section>
+    <h2>:optional</h2>
+    <div class="optional">
+      <label for="required">Requerido: </label>
+      <input type="text" name="required" id="required" required>
+
+      <label for="norequired">No requerido: </label>
+      <input type="text" name="norequired" id="norequired">
+    </div>
+    <style>
+      .optional input:optional {
+        background-color: blue;
+      } 
+    </style>
+  </section>
+  <hr />
 </html>
