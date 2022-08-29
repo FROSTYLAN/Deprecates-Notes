@@ -8,6 +8,11 @@ var articulos = [
   { nombre: "Audífonos", costo: 1700 },
 ];
 
-var nombreArticulos = articulos.map(function (nombre) {
+var nombreArticulos = articulos.map(function (articulo) {
   return articulo.nombre;
 });
+
+console.log(nombreArticulos);
+
+// Este crear un array nuevo iterando los elemento de
+// otro array a traves de una función.
