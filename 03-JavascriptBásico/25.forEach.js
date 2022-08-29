@@ -14,5 +14,6 @@ articulos.forEach(function (articulo) {
 
 // El método forEach() ejecuta la función
 // indicada una vez por cada elemento del array.
+// A diferencia de los otros métodos este no crea un nuevo array.
 
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
