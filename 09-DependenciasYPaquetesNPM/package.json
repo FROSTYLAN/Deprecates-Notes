@@ -12,5 +12,14 @@
     "package"
   ],
   "author": "Charles Castillo <castillo089frosty@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "date-fns": "^2.29.3"
+  },
+  "optionalDependencies": {
+    "eslint": "^8.23.1"
+  }
 }
