@@ -14,10 +14,12 @@
   "author": "Charles Castillo <castillo089frosty@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "json-server": "^0.15.0",
     "moment": "^2.29.4"
   },
   "devDependencies": {
-    "date-fns": "^2.29.3"
+    "date-fns": "^2.29.3",
+    "webpack": "^5.74.0"
   },
   "optionalDependencies": {
     "eslint": "^8.23.1"
