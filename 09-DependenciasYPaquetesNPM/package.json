@@ -14,7 +14,6 @@
   "author": "Charles Castillo <castillo089frosty@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.15.0",
     "moment": "^2.29.4"
   },
   "devDependencies": {
