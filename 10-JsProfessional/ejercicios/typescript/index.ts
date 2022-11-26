@@ -1,12 +1,12 @@
 console.log("Hola TypeScript");
 
-function add(a: number, b: number)  {
-    return a + b;
-}
+// function add(a: number, b: number)  {
+//     return a + b;
+// }
 
-let sum = add(2,5);
+// let sum = add(2,5);
 
-console.log(sum);
+// console.log(sum);
 
 
 // TIPOS BÁSICOS
@@ -52,3 +52,31 @@ comodin = {type: 'Wildcard'};
 
 // Object 
 let someObject: object = {type: 'Wildcard'};
+
+
+// FUNCIONES
+
+function add(a: number, b: number): number {
+    return a + b;
+}
+const sum = add(4,6);
+
+
+function createAdder (a: number): (number) => number {
+    return function (b: number) {
+        return b + a;
+    }
+}
+const addFour = createAdder(4);
+const fourPlus = addFour(6);
+
+
+function fullName(firstName: string, lastName?: string): string {
+    return `${firstName} ${lastName}`;
+}
+const user1 = fullName('Charles');
+
+function nameCastilloFamily(firstName: string, lastName: string = 'Castillo'): string {
+    return `${firstName} ${lastName}`;
+}
+const user2 = nameCastilloFamily('Deyvis');
