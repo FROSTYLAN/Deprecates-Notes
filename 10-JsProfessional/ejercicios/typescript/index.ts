@@ -80,3 +80,34 @@ function nameCastilloFamily(firstName: string, lastName: string = 'Castillo'): s
     return `${firstName} ${lastName}`;
 }
 const user2 = nameCastilloFamily('Deyvis');
+
+
+// INTEFACES
+
+interface Rectangulo {
+    ancho: number;
+    alto: number;
+    color?: Color;
+};
+
+let rect: Rectangulo = {
+    ancho: 4,
+    alto: 6,
+    color: Color.Azul,
+};
+
+function area(r: Rectangulo): number {
+    return r.alto * r.ancho;
+}
+
+const areaRect = area(rect);
+console.log(areaRect);
+
+
+console.log(rect.toString());
+
+rect.toString = function () {
+    return this.color ?  `Un rectangulo ${this.color}` : "Un rectángulo";
+}
+
+console.log(rect.toString());
