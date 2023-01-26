@@ -1,7 +1,7 @@
-import MediaPlayer from "./MediaPlayer";
-import AutoPlay from "./plugins/AutoPlay";
-import AutoPause from "./plugins/AutoPause";
-import AdsPlugin from "./plugins/Ads";
+import MediaPlayer from "@frostylan/mediaplayer";
+import AutoPlay from "@frostylan/mediaplayer/lib/plugins/AutoPlay";
+import AutoPause from "@frostylan/mediaplayer/lib/plugins/AutoPause";
+import AdsPlugin from "@frostylan/mediaplayer/lib/plugins/Ads";
 
 const video = document.querySelector("video");
 const btnTogglePlay: any = document.querySelector(".btnTogglePlay");

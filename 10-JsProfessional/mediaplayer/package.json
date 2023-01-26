@@ -1,0 +1,15 @@
+{
+  "name": "@frostylan/mediaplayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/MediaPlayer.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Charles Castillo <castillo089frosty@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
