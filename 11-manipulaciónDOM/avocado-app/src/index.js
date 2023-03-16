@@ -7,33 +7,61 @@ const baseUrl = "https://platzi-avo.vercel.app";
 
 const appNode = document.querySelector("#app");
 
+const formatPrice = (price) => {
+  const newPrice = new window.Intl.NumberFormat("en-EN", {
+    style: "currency",
+    currency: "USD",
+  }).format(price);
+
+  return newPrice;
+};
+
+// Intl
+// 1 - format dates
+// 2 - format money
+
 // web api
 // Conectarnos al server
 window
   .fetch(`${baseUrl}/api/avo`)
-  // Procesar la respuesta y convertirla en JSON
-  .then((res) => res.json())
-  // JSON -> Data -> Redenrizar info browser
-  .then((resJson) => {
-    const allItems = [];
-    resJson.data.forEach((item) => {
-      console.log(item.name);
-      // crear imagen
-      const image = document.createElement("img");
-      image.src = `${baseUrl}${item.image}`;
+  //procesar la respuesta y convertirla a json
+  .then((respuesta) => respuesta.json())
+  //JSON -> Data -> Renderizar info browser
+  .then((respuestaJson) => {
+    const todosLosItems = [];
+    respuestaJson.data.forEach((item) => {
+      //Crear imagen
+      const imagen = document.createElement("img");
+      imagen.src = `${baseUrl}${item.image}`;
+      imagen.className =
+        "h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6";
 
-      // crear titulo
-      const title = document.createElement("h2");
-      title.textContent = item.name;
+      //Crear titulo
+      const titulo = document.createElement("h2");
+      titulo.innerText = item.name;
+      titulo.className = "text-lg";
+      // title.style = "font-size: 3rem";
+      // title.style.fontSize = "3rem";
+      // title.className = "muy-grande";
 
-      // crear precio
-      const price = document.createElement("div");
-      price.textContent = item.price;
+      //Crear precio
+      const precio = document.createElement("div");
+      precio.textContent = formatPrice(item.price);
+      precio.className = "text-gray-600";
 
-      const container = document.createElement("div");
-      container.append(image, title, price);
-      allItems.push(container);
+      //Wrap price & title
+      const priceAndTitle = document.createElement("div");
+      priceAndTitle.className = "text-left w-48 ml-6";
+      priceAndTitle.append(titulo, precio);
+
+      //Wrap Img and priceAndTitle
+      const card = document.createElement("div");
+      card.className =
+        "flex bg-white rounded-lg p-6 hover:bg-gray-300 m-2 w-80";
+      card.append(imagen, priceAndTitle);
+      console.log(card);
+
+      todosLosItems.push(card);
     });
-
-    appNode.append(...allItems);
+    appNode.append(...todosLosItems);
   });
